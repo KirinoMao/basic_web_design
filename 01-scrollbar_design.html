@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS滚动条与布局</title> 
+<style> 
+.srollb{
+	width:110px;
+	height:110px;
+	border:thin solid black;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	float:left;
+}
+.srollb1{
+	width:110px;
+	height:110px;
+	border:thin solid black;
+	overflow-x:auto;
+	overflow-y:hidden;
+	float:left;
+}
+
+.srollb11{
+	width:110px;
+	height:110px;
+	border:thin solid black;
+	overflow-x:hidden;
+	overflow-y:auto;
+	float:left;
+}
+
+.srollb12{
+	width:110px;
+	height:110px;
+	border:thin solid black;
+	overflow-x:auto;
+	overflow-y:auto;
+}
+
+
+
+
+.srollb2{
+	width:110px;
+	height:110px;
+	border:thin solid black;
+	overflow-x:hidden;
+	overflow-y:auto;
+	float: left;
+}
+.srollb2::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 3px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+  }
+  .srollb2::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius   : 10px;
+  background-color: dimgrey;
+  
+  }
+  .srollb2::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : lavender;
+  border-radius: 10px;
+  }
+
+
+.srollb21{
+	width:110px;
+	height:110px;
+	border:thin solid black;
+	overflow-x:hidden;
+	overflow-y:auto;
+	direction: rtl;
+}
+.srollb21::-webkit-scrollbar {
+  width : 3px;  
+  height: 1px;
+  }
+  .srollb21::-webkit-scrollbar-thumb {
+  border-radius   : 10px;
+  background-color: dimgrey;
+  
+  }
+  .srollb21::-webkit-scrollbar-track {
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : lavender;
+  border-radius: 10px;
+  }
+
+
+</style>
+</head>
+<body>
+
+<br>
+<hr>
+<br>
+<hr align=center width=300 color='#987cb9' SIZE=1>
+
+<h3>1. 是否使用滚动条</h3>
+<div class='srollb'>
+	<p style="width:140px">
+		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+		'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 
+	</p>
+</div>
+
+<div class='srollb1'>
+	<p style="width:140px">
+		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+		'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 
+	</p>
+</div>
+
+<div class='srollb11'>
+	<p style="width:140px">
+		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+		'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 
+	</p>
+</div>
+
+<div class='srollb12'>
+	<p style="width:140px">
+		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+		'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 
+	</p>
+</div>
+
+<p>Overflow-x指定是否要剪辑的左/右边缘的内容，即是否左右移动。</p>
+<p>Overflow-y指定是否要剪辑的顶部/底部边缘的内容，即是否可以上下滚动。</p>
+
+<br>
+<hr>
+<br>
+<hr align=center width=300 color='#987cb9' SIZE=1>
+
+<h3>2. 设计滚动条样式</h3>
+
+<div class='srollb2'>
+	<div class="scrollbar">
+		<p style="width:140px">
+			In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+			'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 
+		</p>
+	</div>
+</div>
+
+<div class='srollb21'>
+	<div class="scrollbar">
+		<p style="width:140px">
+			In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+			'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 
+		</p>
+	</div>
+</div>
+
+</body>
+</html>
